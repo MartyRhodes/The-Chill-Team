@@ -19,3 +19,22 @@ ASI_RMTime1$C3LOG<- log(ASI_RMTime1$C3)
 leveneTest(C3LOG ~ Time, data = ASI_RMTime1)
 C3Rmanova<- aov(C3LOG ~ Time+Error(RandID), ASI_RMTime1)
 summary(C3Rmanova)
+#Not significant
+#c4 and Time
+ASI_RMTime1$C4LOG<- log(ASI_RMTime1$C4)
+leveneTest(C4LOG ~ Time, data = ASI_RMTime1)
+C4Rmanova<- aov(C4LOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(C4Rmanova)
+#Not 
+#CT and Time
+ASI_RMTime1$CTotalLOG<- log(ASI_RMTime1$CTotal)
+leveneTest(CTotalLOG ~ Time, data = ASI_RMTime1)
+CTotalRmanova<- aov(CTotalLOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(CTotalRmanova)
+#Not
+#DHEA
+ASI_RMTime1$DHEALOG<- log(ASI_RMTime1$DHEA)
+leveneTest(DHEALOG ~ Time, data = ASI_RMTime1)
+DHEARmanova<- aov(DHEALOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(DHEARmanova)
+#NOT
