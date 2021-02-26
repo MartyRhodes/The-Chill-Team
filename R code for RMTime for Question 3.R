@@ -38,3 +38,24 @@ leveneTest(DHEALOG ~ Time, data = ASI_RMTime1)
 DHEARmanova<- aov(DHEALOG ~ Time+Error(RandID), ASI_RMTime1)
 summary(DHEARmanova)
 #NOT
+#P17
+ASI_RMTime1$P17.OHLOG<- log(ASI_RMTime1$P17.OH)
+leveneTest(P17.OHLOG ~ Time, data = ASI_RMTime1)
+P17.OHRmanova<- aov(P17.OHLOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(P17.OHRmanova)
+#NOT
+#TIGA
+ASI_RMTime1$TIgALOG<- log(ASI_RMTime1$TIgA)
+leveneTest(TIgALOG ~ Time, data = ASI_RMTime1)
+TIgARmanova<- aov(TIgALOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(TIgARmanova)
+#NOT
+#GIGA
+ASI_RMTime1$GIgALOG<- log(ASI_RMTime1$GIgA)
+leveneTest(GIgALOG ~ Time, data = ASI_RMTime1)
+GIgARmanova<- aov(GIgALOG ~ Time+Error(RandID), ASI_RMTime1)
+summary(GIgARmanova)
+#NOT
+#We think that because we only have 21 participants that the power is too low to show
+#any changes. We saw last night that the power is about.56 where we need it to be
+#.80 at least.
